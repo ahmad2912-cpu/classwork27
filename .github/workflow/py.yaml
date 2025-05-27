@@ -1,0 +1,23 @@
+name: pr-validation-wf
+on: 
+  pull_request:
+    types:
+      - opened
+      - closed
+  push:
+    branches:
+      - develop
+
+jobs:
+  pr-validation-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: welcome steps
+        run: echo "welcome to github actions"
+      - name: second steps
+        run: echo "second step"
+  second-job:
+   runs-on: ubuntu-latest
+   steps:
+     - name: First step
+       run: echo "second-job"
